@@ -4,6 +4,16 @@
 #include <math.h>
 //no change
 float wallis_pi(int);
+float wallis_pi(int n)
+{int i;
+float pi=1.0,p=1.00,mult=1.00;
+for(i=1;i<=n;i++)
+{ p=(4.0*i*i/((4.0*i*i)-1));
+mult=mult*p;
+}
+pi=2*mult;
+return pi;
+}
 
 int main(void) {
   float pi;
